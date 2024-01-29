@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> 4) Write a mul Function Which will Work Properly When invoked With Following Syntax. </h2>
+    <p>In this tutorial, we will learn to implement MUL() function in JavaScript. This function is a very small kind of
+        multiplication function. Basically, we use the concept of nested functions to implement MUL( ) function. Nested
+        functions are used for creating closures and decorators. And we can achieve privacy using nested functions.
+
+        There are two ways to implement MUL() function using nested functions −
+    <ul>
+        <li>Using nested function with name</li>
+        <li>By currying a function</li>
+    </ul>
+    </p>
+</body>
+<script>
+ function mul(x) {
+        return function(y) {
+        return function(z) {
+        return x*y*z;
+        };
+        }
+        }
+
+        console.log(mul(2)(3)(5));
+        console.log(mul(2)(3)(4));
+</script>
+</html>

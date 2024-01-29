@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>64) What is Character at index 15 in ’30 Days of JavaScript’ string? Use charAt() method. </h2>
+    <button onclick="getCharacterAtIndex()">Get Character at Index 15</button>
+    <div id="output"></div>
+</body>
+<script>
+            function getCharacterAtIndex() {
+            // The input string
+            const inputString = "30 Days of JavaScript";
+
+            // Get the character at index 15 using charAt()
+            const characterAtIndex = inputString.charAt(15);
+
+            // Display the result in an HTML element with id "output"
+            document.getElementById("output").innerHTML = `Character at index 15: ${characterAtIndex}`;
+        }
+</script>
+</html>

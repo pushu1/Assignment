@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>63) Change all the string characters to lowercase letters using toLowerCase() Method. </h2>
+    <label for="inputString">Enter a String:</label>
+    <input type="text" id="inputString" placeholder="e.g., Hello, World!">
+    <br>
+
+    <button onclick="convertToLowerCase()">Convert to Lowercase</button>
+    <div id="output"></div>
+</body>
+<script>
+            function convertToLowerCase() {
+            // Get the input string from the user
+            const inputString = document.getElementById("inputString").value;
+
+            // Use the toLowerCase() method to convert the string to lowercase
+            const lowercaseString = inputString.toLowerCase();
+
+            // Display the result in an HTML element with id "output"
+            document.getElementById("output").innerHTML = `Lowercase String: ${lowercaseString}`;
+        }
+</script>
+</html>

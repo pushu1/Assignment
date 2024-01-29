@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>45) Write a JavaScript program to determine if a variable is array?</h2>
+    <label for="inputVariable">Enter a Variable:</label>
+    <input type="text" id="inputVariable" placeholder="e.g., [1, 2, 3]">
+    <button onclick="checkIsArray()">Check</button>
+    <div id="output"></div>
+</body>
+<script>
+    function checkIsArray() {
+            // Get the input variable from the user
+            const inputVariable = document.getElementById("inputVariable").value;
+
+            // Use Array.isArray() to check if the variable is an array
+            const isArray = Array.isArray(inputVariable);
+
+            // Display the result in an HTML element with id "output"
+            document.getElementById("output").innerHTML = `Is Array: ${isArray ? 'Yes' : 'No'}`;
+        }
+</script>
+</html>

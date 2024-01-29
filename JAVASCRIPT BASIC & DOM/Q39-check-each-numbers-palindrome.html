@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>39) Accept 3 numbers from user using while loop and check each numbers palindrome? </h2>
+</body>
+<script>
+    let count = 0;
+
+while (count < 3) {
+  let num = Number(prompt("Enter a number:"));
+  let reversedNum = 0;
+  let originalNum = num;
+
+  // Reverse the number
+  while (num > 0) {
+    reversedNum = reversedNum * 10 + num % 10;
+    num = Math.floor(num / 10);
+  }
+
+  // Check if the number is a palindrome
+  if (originalNum === reversedNum) {
+    console.log(originalNum + " is a palindrome.");
+  } else {
+    console.log(originalNum + " is not a palindrome.");
+  }
+
+  count++;
+}
+</script>
+</html>

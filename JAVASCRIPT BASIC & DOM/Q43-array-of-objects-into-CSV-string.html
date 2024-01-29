@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>43) Write a JavaScript program to convert an array of objects into CSV string? </h2>
+    <button onclick="downloadCSV()">Download CSV</button>
+</body>
+<script>
+    function arrayToCSV(data) {
+            // Extract headers from the first object in the array
+            const headers = Object.keys(data[0]);
+
+            // Create CSV header row
+            const csvHeader = headers.join(',');
+
+            // Create CSV rows
+            const csvRows = data.map(obj => {
+                // Extract values from each object
+                const values = headers.map(header => obj[header]);
+                return values.join(',');
+            });
+
+            // Combine header and rows
+            const csvContent = [csvHeader, ...csvRows].join('\n');
+
+            return csvContent;
+        }
+
+        function downloadCSV() {
+            // Sample array of objects
+            const data = [
+                { name: 'John', age: 30, city: 'New York' },
+                { name: 'Alice', age: 25, city: 'London' },
+                { name: 'Bob', age: 35, city: 'Paris' }
+            ];
+
+            // Convert array to CSV
+            const csvContent = arrayToCSV(data);
+
+            // Create a Blob with the CSV content
+            const blob = new Blob([csvContent], { type: 'text/csv' });
+
+            // Create a download link
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'data.csv';
+
+            // Append the link to the document and trigger the download
+            document.body.appendChild(link);
+            link.click();
+
+            // Clean up by removing the link from the document
+            document.body.removeChild(link);
+        }
+</script>
+</html>

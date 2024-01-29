@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>34) Write to print number in reverse order e.g.: number = 64728 ---> reverse =82746 in JS? </h2>
+</body>
+<script>
+    let number = 64728;
+ 
+let result = 0;
+
+while(number>0){
+    
+    rightmost = number%10;
+    
+    result = result*10 + rightmost;
+    
+    number = Math.floor(number/10);
+}
+console.log("Reversed number is : " + result)
+
+</script>
+</html>

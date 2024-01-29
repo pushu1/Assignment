@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>49) Change all the string characters to capital letters using toUpperCase() method?</h2>
+    <label for="inputString">Enter a String:</label>
+    <input type="text" id="inputString" placeholder="e.g., Hello, World!">
+    <button onclick="convertToUpperCase()">Convert to Uppercase</button>
+    <div id="output"></div>
+</body>
+<script>
+          function convertToUpperCase() {
+            // Get the input string from the user
+            const inputString = document.getElementById("inputString").value;
+
+            // Convert the string to uppercase using toUpperCase()
+            const uppercaseString = inputString.toUpperCase();
+
+            // Display the result in an HTML element with id "output"
+            document.getElementById("output").innerHTML = `Uppercase String: ${uppercaseString}`;
+        }
+</script>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Create result</h2>
+    <form>
+        <h3>Marksheet For Information Technology</h3><br>
+        <h3>Enter Marks</h3><br>
+        <form id="marksheetForm">
+            <label for="subject1">1. C Language:</label>
+            <input type="number" id="subject1" name="subject1" min="0" max="100" required>
+            <br>
+            <label for="subject2">2. C++ Language:</label>
+            <input type="number" id="subject2" name="subject2" min="0" max="100" required>
+            <br>
+            <label for="subject3">3. Database:</label>
+            <input type="number" id="subject3" name="subject3" min="0" max="100" required>
+            <br>
+            <label for="subject4">4. HTML:</label>
+            <input type="number" id="subject4" name="subject4" min="0" max="100" required>
+            <br>
+            <label for="subject5">5. CSS:</label>
+            <input type="number" id="subject5" name="subject5" min="0" max="100" required>
+            <br>
+            <label for="subject6">6. php:</label>
+            <input type="number" id="subject6" name="subject6" min="0" max="100" required>
+            <br>
+            <label for="subject7">7. Core java:</label>
+            <input type="number" id="subject7" name="subject7" min="0" max="100" required>
+            <br>
+            <button type="button" onclick="calculatePercentage()">Create Result</button>
+        </form>
+        <div id="results">
+            <p>Total is: <span id="totalMarks"></span>/350</p>
+            <p>Percentage is: <span id="percentage"></span>%</p>
+        </div>
+
+</body>
+<script>
+function calculatePercentage() {
+  // Get the values from the input fields
+  var s1 = parseInt(document.getElementById("subject1").value);
+  var s2 = parseInt(document.getElementById("subject2").value);
+  var s3 = parseInt(document.getElementById("subject3").value);
+  var s4 = parseInt(document.getElementById("subject4").value);
+  var s5 = parseInt(document.getElementById("subject5").value);
+  var s6 = parseInt(document.getElementById("subject6").value);
+  var s7 = parseInt(document.getElementById("subject7").value);
+
+  // Calculate the total marks
+  var totalMarks = s1 + s2 + s3 + s4 + s4 + s5 + s6;
+
+  // Calculate the percentage
+  var percentage = (totalMarks / 350) * 100;
+
+  // Display the results
+  document.getElementById("totalMarks").textContent = totalMarks;
+  document.getElementById("percentage").textContent = percentage.toFixed(2);
+}
+
+</script>
+
+</html>

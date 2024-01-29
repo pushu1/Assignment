@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>61) Split the string into an array using split() Method?</h2>
+    <label for="inputString">Enter a String:</label>
+    <input type="text" id="inputString" placeholder="e.g., Hello,World">
+    <br>
+
+    <label for="separator">Enter a Separator:</label>
+    <input type="text" id="separator" placeholder="e.g., ,">
+    <br>
+
+    <button onclick="splitString()">Split String</button>
+    <div id="output"></div>
+</body>
+<script>
+            function splitString() {
+            // Get the input string from the user
+            const inputString = document.getElementById("inputString").value;
+
+            // Get the separator from the user
+            const separator = document.getElementById("separator").value;
+
+            // Use the split() method to split the string into an array
+            const resultArray = inputString.split(separator);
+
+            // Display the result in an HTML element with id "output"
+            document.getElementById("output").innerHTML = `Result Array: ${JSON.stringify(resultArray)}`;
+        }
+</script>
+</html>

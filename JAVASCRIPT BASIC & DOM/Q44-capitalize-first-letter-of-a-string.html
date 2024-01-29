@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>44) Write a JavaScript program to capitalize first letter of a string?</h2>
+    <label for="inputString">Enter a String:</label>
+    <input type="text" id="inputString">
+    <button onclick="capitalizeFirstLetter()">Capitalize</button>
+    <div id="output"></div>
+</body>
+<script>
+    function capitalizeFirstLetter() {
+            // Get the input string from the user
+            const inputString = document.getElementById("inputString").value;
+
+            // Check if the input string is not empty
+            if (inputString.trim() !== '') {
+                // Capitalize the first letter
+                const capitalizedString = inputString.charAt(0).toUpperCase() + inputString.slice(1);
+
+                // Display the result in an HTML element with id "output"
+                document.getElementById("output").innerHTML = `Capitalized String: ${capitalizedString}`;
+            } else {
+                // Display an error message if the input string is empty
+                document.getElementById("output").innerHTML = 'Please enter a string.';
+            }
+        }
+</script>
+</html>

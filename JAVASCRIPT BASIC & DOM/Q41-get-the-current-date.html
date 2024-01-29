@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>41) Write a JavaScript program to get the current date? </h2>
+    <div id="output"></div>
+</body>
+<script>
+    function getCurrentDate() {
+            const now = new Date();
+            
+            // Get individual date components
+            const year = now.getFullYear();
+            const month = now.getMonth() + 1; // Months are zero-indexed
+            const day = now.getDate();
+
+            // Format the date as "YYYY-MM-DD"
+            const formattedDate = `${year}-${month < 10 ? '0' + month : month}-${day < 10 ? '0' + day : day}`;
+
+            return formattedDate;
+        }
+
+        function displayCurrentDate() {
+            // Get the current date
+            const currentDate = getCurrentDate();
+
+            // Display the output in an HTML element with id "output"
+            document.getElementById("output").innerHTML = `Current Date is: ${currentDate}`;
+        }
+
+        // Call the displayCurrentDate function when the page is loaded
+        window.onload = displayCurrentDate;
+</script>
+</html>

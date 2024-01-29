@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>46) Write a JavaScript program to clone an array? </h2>
+    <label for="inputArray">Enter an Array (JSON format):</label>
+    <input type="text" id="inputArray" placeholder="e.g., [1, 2, 3]">
+    <button onclick="cloneArray()">Clone Array</button>
+    <div id="output"></div>
+</body>
+<script>
+    function cloneArray() {
+            // Get the input array from the user
+            const inputArray = document.getElementById("inputArray").value;
+
+            try {
+                // Parse the input as JSON to convert it to an array
+                const originalArray = JSON.parse(inputArray);
+
+                // Use slice() to create a shallow clone of the array
+                const clonedArray = originalArray.slice();
+
+                // Display the result in an HTML element with id "output"
+                document.getElementById("output").innerHTML = `Original Array: ${JSON.stringify(originalArray)}<br>Cloned Array: ${JSON.stringify(clonedArray)}`;
+            } catch (error) {
+                // Display an error message if the input is not a valid JSON array
+                document.getElementById("output").innerHTML = 'Please enter a valid JSON array.';
+            }
+        }
+</script>
+</html>

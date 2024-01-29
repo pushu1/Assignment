@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>7) Check if typeof '10' is exactly equal to 10. If not make it exactly equal?</h2>
+    <p>
+        In JavaScript, the typeof operator returns a string indicating the type of the operand. If you want to check if
+        the string '10' is exactly equal to the number 10, you need to convert one of them to match the other type.</p>
+</body>
+<script>
+var stringNumber = '10';
+        var integerNumber = 10;
+
+        if (typeof stringNumber === 'string' && typeof integerNumber === 'number') {
+    
+        if (Number(stringNumber) === integerNumber) {
+        console.log('The values are exactly equal.');
+        } else {
+        console.log('The values are not exactly equal.');
+
+        stringNumber = Number(stringNumber);
+        console.log('Now, the values are exactly equal:', stringNumber === integerNumber);
+        }
+        } else {
+        console.log('Invalid types for comparison.');
+        }
+</script>
+</html>

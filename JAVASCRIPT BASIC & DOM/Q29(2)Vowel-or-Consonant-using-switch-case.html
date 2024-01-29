@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>29) Write to show</h2>
+    <h3>ii. Vowel or Consonant using switch case in JS?</h3>
+</body>
+<script>
+    function checkVowelOrConsonant(char) {
+    switch (char.toLowerCase()) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            console.log(char + " is a vowel.");
+            break;
+        default:
+            console.log(char + " is a consonant.");
+            break;
+    }
+}
+checkVowelOrConsonant('a');
+</script>
+</html>

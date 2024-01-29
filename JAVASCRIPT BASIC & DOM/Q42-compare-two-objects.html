@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>42) Write a JavaScript program to compare two objects?</h2>
+    <div id="output"></div>
+</body>
+<script>
+         function compareObjects(obj1, obj2) {
+            // Check if the number of properties is the same
+            if (Object.keys(obj1).length !== Object.keys(obj2).length) {
+                return false;
+            }
+
+            // Iterate through properties and compare values
+            for (let key in obj1) {
+                if (obj1.hasOwnProperty(key) && obj2.hasOwnProperty(key)) {
+                    if (obj1[key] !== obj2[key]) {
+                        return false;
+                    }
+                } else {
+                    return false; // One of the objects doesn't have the property
+                }
+            }
+
+            return true; // Objects are equal
+        }
+
+        function displayComparisonResult() {
+            // Sample objects for comparison
+            const object1 = { name: "John", age: 30, city: "New York" };
+            const object2 = { name: "John", age: 30, city: "India" };
+
+            // Compare objects
+            const areEqual = compareObjects(object1, object2);
+
+            // Display the comparison result in an HTML element with id "output"
+            document.getElementById("output").innerHTML = `Objects are ${areEqual ? 'equal' : 'not equal'}`;
+        }
+
+        // Call the displayComparisonResult function when the page is loaded
+        window.onload = displayComparisonResult;
+</script>
+</html>

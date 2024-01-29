@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>62) Check if the string contains a word Script using includes() method?</h2>
+    <label for="inputString">Enter a String:</label>
+    <input type="text" id="inputString" placeholder="e.g., JavaScript">
+    <br>
+
+    <button onclick="checkForScript()">Check for 'Script'</button>
+    <div id="output"></div>
+</body>
+<script>
+            function checkForScript() {
+            // Get the input string from the user
+            const inputString = document.getElementById("inputString").value;
+
+            // Check if the input string contains the word "Script"
+            const containsScript = inputString.includes("Script");
+
+            // Display the result in an HTML element with id "output"
+            document.getElementById("output").innerHTML = `Contains 'Script': ${containsScript ? 'Yes' : 'No'}`;
+        }
+</script>
+</html>

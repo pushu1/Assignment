@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            border: 10px solid rosybrown;
+            text-align: center;
+        }
+
+        table tr td {
+            border: 2px solid black;
+        }
+
+        td {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2> 1) What is JavaScript. How to use it? </h2>
+    <p>JavaScript is a scripting or programming language that allows you to implement complex features on web pages —
+        every time a web page does more than just sit there and display static information for you to look at —
+        displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc.
+    </p>
+    <h2> 2) How many type of Variable in JavaScript? </h2>
+    <p>There are two types of variables in JavaScript : local variable and global variable.</p>
+    <h2> 3) Define a Data Types in js?</h2>
+    <p>Data types describe the different types or kinds of data that we're gonna be working with and storing in
+        variables. In Javascript, there are five basic, or primitive, types of data. The five most basic types of data
+        are strings, numbers, booleans, undefined, and null.</p>
+    <h2>5) What the deference between undefined and undeclare in JavaScript?</h2>
+    <p>
+    <h4>Undeclared</h4>
+    <p>When a variable is “undeclared,” it means that it has not been declared or defined in the current scope. In other
+        words, it hasn’t been given a value or a type. This can happen if you try to use a variable without declaring it
+        first, or if you misspell the variable name.</p>
+    <h4>Undefined</h4>
+    <p>Unlike “undeclared” variables, “undefined” variables have been declared in the current scope, but have not been
+        given a value. In other words, they have been initialized, but their value is not defined.</p>
+    </p>
+    <h2>10) What is Condition Statement?</h2>
+    <p>Conditional statements in JavaScript allow you to execute specific blocks of code based on conditions. If the
+        condition meets then a particular block of action will be executed otherwise it will execute another block of
+        action that satisfies that particular condition.
+
+        There are several methods that can be used to perform Conditional Statements in JavaScript.
+    <ul>
+        <li>if Statement</li>
+        <li>if-else Statement</li>
+        <li>else if Statement</li>
+        <li>switch Statement</li>
+        <li>Ternary Operator</li>
+    </ul>
+    </p>
+    <h2>15) What is the result of the expression (5 > 3 && 2 < 4)?</h2>
+            <p>The result is true, because at least one of the conditions is true.</p>
+            <h2>16) What is the result of the expression (true && 1 && "hello")? </h2>
+            <p>The result is "hello", because all the operands are truthy, and the "&&" operator returns the last truthy
+                operand.</p>
+            <h2>17) What is the result of the expression true && false || false && true? </h2>
+            <p>The result is false, because the "&&" operator has higher precedence than the "||" operator, so the
+                expression is equivalent to ((true && false) || (false && true)), which returns false.</p>
+            <h2>18) What is a Loop and Switch Case in JavaScript define that ? </h2>
+            <p>A for loop is a control structure that allows you to repeat a block of code a certain number of times,
+                while a switch case is a control structure that allows you to execute different blocks of code based on
+                the value of an expression.</p>
+            <h2>19) What is the use of is Nan function?</h2>
+            <p>isNaN() method returns true if a value is Not-a-Number. Number.isNaN() returns true if a number is
+                Not-a-Number. In other words: isNaN() converts the value to a number before testing it.</p>
+            <h2>20) What is the difference between && and || in JavaScript?</h2>
+            <p>Difference between && and || and their opposites
+                || means “or”. It evaluates to true if the expression on either side is truthy. && means “and”.</p>
+            <h2>21) What is the use of Void (0)?</h2>
+            <p>JavaScript void 0 means returning undefined (void) as a primitive value. You might come across the term
+                “JavaScript:void(0)” while going through HTML documents. It is used to prevent any side effects caused
+                while inserting an expression in a web page.</p>
+            <h2>50) What is the drawback of declaring methods directly in JavaScript objects?</h2>
+            <p>1. Memory Inefficiency:</p>
+            <ul>
+                <li>Each instance of the object will have its own copy of the methods, even if they are identical.</li>
+                <li>This can lead to increased memory usage, especially when dealing with many instances of similar objects.</li>
+            </ul>
+            <p>2. Performance Overhead:</p>
+            <ul>
+                <li>Creating new method copies for each object instance takes time and resources.</li>
+                <li>This can impact performance, particularly in applications with frequent object creation and method calls.</li>
+            </ul>
+            <p>3. Lack of Inheritance:</p>
+            <ul>
+                <li>Methods declared directly within objects are not shared through inheritance.</li>
+                <li>This means each object must redefine its own methods, even those that are common across multiple objects.</li>
+                <li>Prototype-based inheritance, on the other hand, allows sharing methods efficiently among related objects.</li>
+            </ul>
+            <p>4. Potential for Naming Conflicts:</p>
+            <ul>
+                <li>If multiple objects with the same method names are combined, their methods might overwrite each other, leading to unexpected behavior.</li>
+            </ul>
+            <p>5. Issues with this Keyword:</p>
+            <ul>
+                <li>When a method is called directly within an object, this refers to the global object, not the object itself.</li>
+                <li>This can lead to errors and unexpected behavior if not handled carefully.</li>
+            </ul>
+           
+            <h2>57) how many type of JS Event? How to use it ?</h2>
+            <h1>Mouse Events</h1>
+            <table border="1">
+                <th>Event performed</th>
+                <th>Event Handler</th>
+                <th>Description</th>
+                <tr>
+                    <td>Click</td>
+                    <td>Onclick</td>
+                    <td>When mouse click on an element</td>
+                </tr>
+                <tr>
+                    <td>Mouseover</td>
+                    <td>Onmouseover</td>
+                    <td>When the cursor of the mouse comes over the element</td>
+                </tr>
+                <tr>
+                    <td>Mouseout</td>
+                    <td>Onmouseout</td>
+                    <td>When the cursor of the mouse leaves an element</td>
+                </tr>
+                <tr>
+                    <td>Mousedown</td>
+                    <td>Onmousedown</td>
+                    <td>When the mouse button is pressed over the element</td>
+                </tr>
+                <tr>
+                    <td>Mouseup</td>
+                    <td>Onmouseup</td>
+                    <td>When the mouse button is released over the element</td>
+                </tr>
+                <tr>
+                    <td>Mousemove</td>
+                    <td>Onmousemove</td>
+                    <td>When the mouse movement takes place.</td>
+                </tr>
+            </table>
+            <h1>Keyboard Event:</h1>
+            <table border="1">
+                <th>Event performed</th>
+                <th>Event Handler</th>
+                <th>Description</th>
+                <tr>
+                    <td>Keydown & Keyup</td>
+                    <td>Onkeydown & Onkeyup</td>
+                    <td>When the user press and then release the key</td>
+                </tr>
+            </table>
+            <h1>Form Event:</h1>
+            <table border="1">
+                <th>Event performed</th>
+                <th>Event Handler</th>
+                <th>Description</th>
+                <tr>
+                    <td>Focus</td>
+                    <td>Onfocus</td>
+                    <td>When the user focuses on an element</td>
+                </tr>
+                <tr>
+                    <td>Submit</td>
+                    <td>Onsubmit</td>
+                    <td>When the user submits the form</td>
+                </tr>
+                <tr>
+                    <td>Blur</td>
+                    <td>Onblur</td>
+                    <td>When the focus is away from a form element</td>
+                </tr>
+                <tr>
+                    <td>Change</td>
+                    <td>Onchange</td>
+                    <td>When the user modifies or changes the value of a form element</td>
+                </tr>
+            </table>
+            <h1>Window/document Event:</h1>
+            <table border="1">
+                <th>Event performed</th>
+                <th>Event Handler</th>
+                <th>Description</th>
+                <tr>
+                    <td>Load</td>
+                    <td>Onload</td>
+                    <td>When the browser finishes the loading of the page</td>
+                </tr>
+                <tr>
+                    <td>Unload</td>
+                    <td>Onunload</td>
+                    <td>When the visitor leaves the current webpage, the browser unloads it</td>
+                </tr>
+                <tr>
+                    <td>Resize</td>
+                    <td>Onresize</td>
+                    <td>When the visitor resizes the window of the browser</td>
+                </tr>
+
+            </table>
+            <h2>59) What is Bom vs Dom in JS? </h2>
+            <h2>Dom(Document object model)</h2>
+            <p>Objects that have to do with the currently loaded page (the page is also called the document) BOM:
+                Objects that
+                deal with everything outside the page (the browser window and the desktop screen)</p>
+            <h2>Bom(Browser object model)</h2>
+            <p>The Browser Object Model (BOM) in JavaScript includes the properties and methods for JavaScript to
+                interact with
+                the web browser. BOM provides you with window object, for example, to show the width and height of the
+                window.
+                It also includes the window. screen object to show the width and height of the screen.</p>
+            <h2>60) Array vs object defences in JS? </h2>
+            <div>
+                <h1>Object</h1>
+                <h3>when to use object:</h3>
+                <p>Objects are used to represent a “thing” in your code. That could be a person, a car, a building, a
+                    book, a
+                    character in a game — basically anything that is made up or can be defined by a set of
+                    characteristics. In
+                    objects, these characteristics are called properties that consist of a key and a value.</p>
+                <h4>Syntax:</h4>
+                <p>// Basic object syntax <br>
+                    var object = { <br>
+                    key: 'value' <br>
+                    }; <br>
+                    Example 'person' object <br>
+                    var person = { <br>
+                    name: 'Zac', <br>
+                    age: 33, <br>
+                    likesCoding: true <br>
+                    };</p>
+            </div>
+            <div>
+                <h1>Array</h1>
+                <h3>when to use array:</h3>
+                <p>We use arrays whenever we want to create and store a list of multiple items in a single variable.
+                    Arrays are
+                    especially useful when creating ordered collections where items in the collection can be accessed by
+                    their
+                    numerical position in the list. Just as object properties can store values of any primitive data
+                    type (as
+                    well as an array or another object), so too can arrays consist of strings, numbers, booleans,
+                    objects, or
+                    even other arrays.</p>
+            </div>
+            <h2>66) Find the length of a string without using libraryFunction?</h2>
+            <ol>
+                <li>What is JavaScript?</li>
+                <p>JavaScript is a scripting or programming language that allows you to implement complex features on
+                    web pages — every time a web page does more than just sit there and display static information for
+                    you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics,
+                    scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third
+                    layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in
+                    much more detail in other parts of the Learning Area.</p>
+                <li>What is the use of isNaN function?</li>
+                <p>isNaN() returns true if a number is Not-a-Number. In other words: isNaN() converts the value to a
+                    number before testing it.</p>
+                <li>What is negative Infinity?</li>
+                <p>NEGATIVE_INFINITY is a special numeric value that is returned when an arithmetic operation or
+                    mathematical function generates a negative value greater than the largest representable number in
+                    JavaScript (i.e., more negative than -Number. MAX_VALUE) . JavaScript displays the NEGATIVE_INFINITY
+                    value as -Infinity .</p>
+                <li>Which company developed JavaScript?</li>
+                <p>JavaScript was created at Netscape Communications by Brendan Eich in 1995. Netscape and Eich designed
+                    JavaScript as a scripting language for use with the company's flagship web browser, Netscape
+                    Navigator.</p>
+                <li>What are undeclared and undefined variables?</li>
+                <p>Undefined: It occurs when a variable has been declared but has not been assigned any value. Undefined
+                    is not a keyword. </p>
+                <p>Undeclared: It occurs when we try to access any variable that is not initialized or declared earlier
+                    using the var or const keyword. If we use ‘typeof’ operator to get the value of an undeclared
+                    variable, we will face the runtime error with the return value as “undefined”. The scope of the
+                    undeclared variables is always global</p>
+                <li>What is the difference between ViewState and SessionState?</li>
+                <table>
+                    <tr>
+                        <td>ViewState</td>
+                        <td>SessionState</td>
+                    </tr>
+                    <tr>
+                        <td>Maintained at page level only.</td>
+                        <td>Maintained at session level.</td>
+                    </tr>
+                    <tr>
+                        <td>View state can only be visible from a single page and not multiple pages.</td>
+                        <td>Session state value availability is across all pages available in a user session.</td>
+                    </tr>
+                    <tr>
+                        <td>It will retain values in the event of a postback operation occurring.</td>
+                        <td>In session state, user data remains in the server. Data is available to user until the
+                            browser is closed or there is session expiration.</td>
+                    </tr>
+                    <tr>
+                        <td>Information is stored on the client’s end only.</td>
+                        <td>Information is stored on the server.</td>
+                    </tr>
+                    <tr>
+                        <td>used to allow the persistence of page-instance-specific data.</td>
+                        <td>used for the persistence of user-specific data on the server’s end.</td>
+                    </tr>
+                    <tr>
+                        <td>ViewState values are lost/cleared when new page is loaded.</td>
+                        <td>SessionState can be cleared by programmer or user or in case of timeouts.</td>
+                    </tr>
+                </table>
+                <li>What is === operator?</li>
+                <p>The strict equality (===) operator checks whether its two operands are equal, returning a Boolean
+                    result. Unlike the equality operator, the strict equality operator always considers operands of
+                    different types to be different.</p>
+                <li>How can the style/class of an element be changed?</li>
+                <p>The document. getElementById() method is used to return the element in the document with the “id”
+                    attribute and the “className” attribute can be used to change/append the class of the element.</p>
+                <li>How to read and write a file using JavaScript?</li>
+                <p>1) file=fopen(getScriptPath(),0); The function fread() is used for reading the file content.</p>
+                <p>2) str = fread(file,flength(file) ; The function fwrite() is used to write the contents to the file.
+                </p>
+                <p>3) file = fopen("c:\MyFile.txt", 3);// opens the file for writing.5</p>
+                <li>What are all the looping structures in JavaScript?</li>
+                <p>1) for/in - loops through the properties of an object.</p>
+                <p>2) for/of - loops through the values of an iterable object.</p>
+                <p>3) while - loops through a block of code while a specified condition is true.</p>
+                <p>4) do/while - also loops through a block of code while a specified condition is true.</p>
+                <li>How can you convert the string of any base to an integer in JavaScript?</li>
+                <p>Using parseInt() Method - The parseInt() method accepts the string and radix parameter and converts
+                    it into an integer.</p>
+                <li>What is the function of the delete operator?</li>
+                <p>In JavaScript, the delete operator is the only way to remove properties from an object. When you use
+                    delete, it'll return true when it removes a property and false otherwise. The delete operator
+                    shouldn't be used on predefined JavaScript object properties.</p>
+                <li>What are all the types of Pop up boxes available in JavaScript?</li>
+                <p>JavaScript has three kind of popup boxes.</p>
+                <p>1) Alert box</p>
+                <p>2) Confirm box</p>
+                <p>3) Prompt box</p>
+                <li>What is the use of Void (0)?</li>
+                <p>JavaScript void 0 means returning undefined (void) as a primitive value. You might come across the
+                    term “JavaScript:void(0)” while going through HTML documents. It is used to prevent any side effects
+                    caused while inserting an expression in a web page.</p>
+                <li>How can a page be forced to load another page in JavaScript?</li>
+                <p>We can use window. location property inside the script tag to forcefully load another page in
+                    Javascript. It is a reference to a Location object that is it represents the current location of the
+                    document. We can change the URL of a window by accessing it</p>
+                <li>What are the disadvantages of using innerHTML in JavaScript?</li>
+                <p>It is very slow because as inner HTML already parses the content even we have to parse the content
+                    again so that's why it takes time. When we have used the event handlers then the event handlers are
+                    not automatically attached to the new elements created by innerHTML.</p>
+            </ol>
+</body>
+
+</html>

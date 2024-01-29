@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>33) Write to print Fibonacci series up to given numbers? </h2>
+</body>
+<script>
+const number = parseInt(prompt('Enter the number of Fibonacci series'));
+let a1 = 0, a2 = 1, nextTerm;
+
+console.log('Fibonacci Series:');
+
+for (let i = 1; i <= number; i++) {
+    console.log(a1);
+    nextTerm = a1 + a2;
+    a1 = a2;
+    a2 = nextTerm;
+}
+</script>
+</html>

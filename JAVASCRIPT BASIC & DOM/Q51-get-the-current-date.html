@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="displayCurrentDate()">Get Current Date</button>
+    <div id="output1"></div>
+    <div id="output2"></div>
+    <div id="output3"></div>
+    <div id="output4"></div>
+</body>
+<script>
+     function getCurrentDate(format) {
+            const now = new Date();
+            const day = now.getDate();
+            const month = now.getMonth() + 1; // Months are zero-indexed
+            const year = now.getFullYear();
+
+            // Format the date based on the provided format
+            let formattedDate = "";
+            if (format === "mm-dd-yyyy") {
+                formattedDate = `${month}-${day}-${year}`;
+            } else if (format === "mm/dd/yyyy") {
+                formattedDate = `${month}/${day}/${year}`;
+            } else if (format === "dd-mm-yyyy") {
+                formattedDate = `${day}-${month}-${year}`;
+            } else if (format === "dd/mm/yyyy") {
+                formattedDate = `${day}/${month}/${year}`;
+            }
+
+            return formattedDate;
+        }
+
+        function displayCurrentDate() {
+            // Get the current date in different formats
+            const mm_dd_yyyy = getCurrentDate("mm-dd-yyyy");
+            const mm_slash_dd_slash_yyyy = getCurrentDate("mm/dd/yyyy");
+            const dd_mm_yyyy = getCurrentDate("dd-mm-yyyy");
+            const dd_slash_mm_slash_yyyy = getCurrentDate("dd/mm/yyyy");
+
+            // Display the results in HTML elements with corresponding ids
+            document.getElementById("output1").innerHTML = `mm-dd-yyyy: ${mm_dd_yyyy}`;
+            document.getElementById("output2").innerHTML = `mm/dd/yyyy: ${mm_slash_dd_slash_yyyy}`;
+            document.getElementById("output3").innerHTML = `dd-mm-yyyy: ${dd_mm_yyyy}`;
+            document.getElementById("output4").innerHTML = `dd/mm/yyyy: ${dd_slash_mm_slash_yyyy}`;
+        }
+</script>
+</html>

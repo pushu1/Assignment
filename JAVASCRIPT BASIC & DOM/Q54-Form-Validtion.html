@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>54) Form Validtion in JS? </h2>
+
+    <form onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+    
+    <div id="error"></div>
+</body>
+<script>
+            function validateForm() {
+            // Get form elements
+            var nameInput = document.getElementById("name");
+            var emailInput = document.getElementById("email");
+            var errorDiv = document.getElementById("error");
+
+            // Reset previous error messages
+            errorDiv.innerHTML = "";
+
+            // Validate name
+            if (nameInput.value.trim() === "") {
+                errorDiv.innerHTML += "<p class='error'>Please enter your name.</p>";
+                nameInput.focus();
+                return false;
+            }
+
+            // Validate email
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value.trim())) {
+                errorDiv.innerHTML += "<p class='error'>Please enter a valid email address.</p>";
+                emailInput.focus();
+                return false;
+            }
+
+            // If all validations pass, the form is valid
+            return true;
+        }
+</script>
+</html>
