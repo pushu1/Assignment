@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            border: 10px solid rosybrown;
+            text-align: center;
+        }
+
+        table tr td {
+            border: 2px solid black;
+        }
+
+        td {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>1) What are the advantages of Bootstrap?</h2>
+    <ul>
+        <li>Access to a Vast Open Source Community of Resources. There is a vast community of open-source developers who
+            contribute regularly to Bootstrap. ...</li>
+        <li>Consistent Designs.</li>
+        <li>Access to Support.</li>
+        <li>Fast Development.</li>
+        <li>Responsive Business Actions with a Grid System.</li>
+        <li>Customizable Expansion.</li>
+        <li>Loaded JavaScript Components.</li>
+        <li>Easy to Integrate.</li>
+    </ul>
+    <h2>2) What is a Bootstrap Container, and how does it work?</h2>
+    <p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system.
+        Containers are used to contain, pad, and (sometimes) center the content within them. While containers can be
+        nested, most layouts do not require a nested container</p>
+    <p>Containers are used to pad the content inside of them, and there are two container classes available:</p>
+    <ol>
+        <li>The .container class provides a responsive fixed width container</li>
+        <li>The .container-fluid class provides a full width container, spanning the entire width of the viewport</li>
+    </ol>
+    <h2>3) What are the default Bootstrap text settings?</h2>
+    <p>Bootstrap 4 uses a default font-size of 16px, and its line-height is 1.5. The default font-family is
+    <ol>
+        <li>Helvetica Neue</li>
+        <li>sans-serif</li>
+        <li>Helvetica</li>
+        <li>Arial</li>
+    </ol>
+    In addition, all
+    (p Tag) elements have margin-top: 0 and margin-bottom: 1rem (16px by default).</p>
+    <h2>4) What do you know about the Bootstrap Grid System?</h2>
+    <p>Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. It's built
+        with flexbox and is fully responsive. </p>
+    <h3>Grid Classes</h3>
+    <h4>The Bootstrap grid system has four classes:</h4>
+    <ul>
+        <li>xs (for phones - screens less than 768px wide)</li>
+        <li>sm (for tablets - screens equal to or greater than 768px wide)</li>
+        <li>md (for small laptops - screens equal to or greater than 992px wide)</li>
+        <li>lg (for laptops and desktops - screens equal to or greater than 1200px wide)</li>
+    </ul>
+    <h3>Grid System Rules</h3>
+    <h4>Some Bootstrap grid system rules:</h4>
+    <ol>
+        <li>Rows must be placed within a .container (fixed-width) or .container-fluid (full-width) for proper alignment
+            and padding</li>
+        <li>Use rows to create horizontal groups of columns</li>
+        <li>Content should be placed within columns, and only columns may be immediate children of rows</li>
+        <li>Predefined classes like .row and .col-sm-4 are available for quickly making grid layouts</li>
+        <li>Columns create gutters (gaps between column content) via padding. That padding is offset in rows for the
+            first and last column via negative margin on .rows</li>
+        <li>Grid columns are created by specifying the number of 12 available columns you wish to span. For example,
+            three equal columns would use three .col-sm-4</li>
+        <li>Column widths are in percentage, so they are always fluid and sized relative to their parent element</li>
+    </ol>
+    <h2>5) What is the difference between Bootstrap 4 and Bootstrap 5</h2>
+    <h4>Difference between Bootstrap 4 and Bootstrap 5</h4>
+    <table>
+        <tr>
+            <td>BASIS OF</td>
+            <td>BOOTSTRAP 4</td>
+            <td>BOOTSTRAP 5</td>
+        </tr>
+        <tr>
+            <td>Grid System</td>
+            <td>It has 5 tier (xs, sm, md, lg, xl).</td>
+            <td>It has 6 tier (xs, sm, md, lg, xl, xxl).</td>
+        </tr>
+        <tr>
+            <td>Color</td>
+            <td>It has limited colors.</td>
+            <td>Extra colors added with the looks, A card improved color palette. there are various shades available to
+                choose.</td>
+        </tr>
+        <tr>
+            <td>Jquery</td>
+            <td>It has jquery and all related plugins.</td>
+            <td>Jquery is removed and switched to vanilla JS with some working plugins</td>
+        </tr>
+        <tr>
+            <td>Internet Explorer</td>
+            <td>Bootstrap 4 supports both IE 10 and 11.</td>
+            <td>Bootstrap 5 doesn’t support IE 10 and 11.</td>
+        </tr>
+        <tr>
+            <td>Form elements</td>
+            <td>Radio buttons, checkboxes have different look in different OS and browsers. The form uses whatever
+                default browsers provide.</td>
+            <td>The look of form elements will not change, on different OS or browser. The forms can be customized and
+                form controls can be added, they would not depend on browser. </td>
+        </tr>
+        <tr>
+            <td>Utilities API</td>
+            <td>We cannot modify utilities in bootstrap 4</td>
+            <td>Bootstrap 5 gave freedom to modify and also create our own utility</td>
+        </tr>
+        <tr>
+            <td>Gutter</td>
+            <td>We use .glutter with fontsize in px</td>
+            <td>We use .g* with fontsize in rem</td>
+        </tr>
+        <tr>
+            <td>Vertical Classes</td>
+            <td>Columns can be positioned relative</td>
+            <td>Columns cannot be positioned relative</td>
+        </tr>
+        <tr>
+            <td>Bootstrap Icons</td>
+            <td>Bootstrap 4 doesn’t have its own SVG icons, we have to use font-awesome for icons.</td>
+            <td>Bootstrap 5 have its own SVG icons</td>
+        </tr>
+        <tr>
+            <td>Jumbotron</td>
+            <td>It supports.</td>
+            <td>It doesn’t support jumbotron.</td>
+        </tr>
+        <tr>
+            <td>Card deck</td>
+            <td>The card deck is used to create a set of cards with equal width and height.</td>
+            <td>Card deck class in removed in bootstrap</td>
+        </tr>
+        <tr>
+            <td>Navbar</td>
+            <td>We have inline-block property and we will get white dropdown as default for dropdown-menu-dark class.
+            </td>
+            <td>Inline-block property is removed and we will get black dropdown as default for dropdown-menu-dark class.
+            </td>
+        </tr>
+        <tr>
+            <td>Static Site Generator</td>
+            <td>Bootstrap 4 uses Jekyll software.</td>
+            <td>Bootstrap 5 uses Hugo software as it is fast static site generator.</td>
+        </tr>
+        <tr>
+            <td>flexbox grid</td>
+            <td>this makes easier to implement vertical designs, and the columns and rows can easily be implemented. the
+                classes justify-center-content can directly be used to align according to the requirement.</td>
+            <td>advanced grid system is made available , also columns don’t have relative positions. </td>
+        </tr>
+        <tr>
+            <td>RTL Support</td>
+            <td>It does not enable RTL(Right to Left) switching.</td>
+            <td>It enables RTL(Right to Left) switching.</td>
+        </tr>
+        <tr>
+            <td>Offcanvas Component</td>
+            <td>It does not support Offcanvas Component.</td>
+            <td>It supports Offcanvas Component(that is it is available now).</td>
+        </tr>
+    </table>
+    <h2>6) What is a Button Group, and what is the class for a basic Button Group?</h2>
+    <p>“Button Groups” in Bootstrap is a class of name “btn-group” which is used to create a series of buttons in groups
+        (without spaces) vertically or horizontally. Syntax: This is the basic syntax of the button group class where
+        each button has its own class of “btn”.</p>
+    <h2>7) How can you use Bootstrap to make thumbnails?</h2>
+    <ol>
+        <li>Step 1: You need to update the anchor tag to a new div tag, which has . thumbnail as a class.</li>
+        <li>Step 2: In this div tag, we can add any media or text. This div tag is used for a span-based naming
+            convention for sizing.</li>
+    </ol>
+    <h2>8) In Bootstrap 4, what is flexbox?</h2>
+    <p>Bootstrap 4 now uses flexbox, instead of floats, to handle the layout. The Flexible Box Layout Module, makes it
+        easier to design flexible responsive layout structure without using float or positioning.</p>
+    <h2>9) How can one create an alert in Bootstrap?</h2>
+    <ol>
+        <li>alert-success</li>
+        <li>alert-info</li>
+        <li>alert-warning</li>
+        <li>alert-danger</li>
+    </ol>
+    <ul>
+        <li>Success! This alert box indicates a successful or positive action.</li>
+        <li>Info! This alert box indicates a neutral informative change or action.</li>
+        <li>Warning! This alert box indicates a warning that might need attention.</li>
+        <li>Danger! This alert box indicates a dangerous or potentially negative action.</li>
+    </ul>
+    <h2>10) What is a bootstrap card and how would you create one?</h2>
+    <p>A basic Bootstrap card consists of a . card class with the . card-body class, allowing you to add text, images,
+        links, and other Bootstrap elements within a rounded border.</p>
+        <ol>
+            <li>Basic Card</li>
+            <li>Header and Footer</li>
+            <li>Contextual Cards</li>
+            <li>Titles, text, and links</li>
+            <li>Card Images</li>
+            <li>Stretched Link</li>
+            <li>Card Image Overlays</li>
+            <li>Card Columns</li>
+            <li>Card Deck</li>
+            <li>Card Group</li>
+        </ol>
+</body>
+
+</html>
