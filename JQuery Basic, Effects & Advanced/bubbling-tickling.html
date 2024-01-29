@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .topdiv{
+            background-color: tan;
+            padding: 10px;
+        }
+        .middlediv{
+            background-color: olive;
+            padding: 10px;
+        }
+        .innerdiv{
+            background-color: aqua;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Event bubbling tickling example</h2>
+    <div onclick="topdiv()" class="topdiv">
+    TopDiv
+    <div onclick="middlediv()" class="middlediv">
+    MiddelDiv
+    <div onclick="innerdiv()" class="innerdiv">
+    InnerDiv
+    </div>
+    </div>
+    </div>
+</body>
+<script>
+    function topdiv(){
+        alert('TopDiv')
+    }
+    function middlediv(){
+        alert('MiddleDiv')
+    }
+    function innerdiv(){
+        alert('InnerDiv')
+    }
+</script>
+</html>
